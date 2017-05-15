@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+   
+         <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+   
+
+
+<meta charset="UTF-8">
+
+    
+<script>
+  AFRAME.registerComponent('set-sky', {
+    schema: {default:''},
+    init() {
+      
+      const sky = document.querySelector('a-sky');
+      this.el.addEventListener('click', () => {
+        sky.setAttribute('src', this.data);
+
+
+      });
+    }
+  });
+    
+</script>
+<script type="text/javascript"> 
+function next1() {
+    document.getElementById('s1t').setAttribute('visible', 'false')
+    document.getElementById('s2t').setAttribute('visible', 'true')
+  }
+function next2() {
+    document.getElementById('s2t').setAttribute('visible', 'false')
+    document.getElementById('s3t').setAttribute('visible', 'true')
+  }
+function next3() {
+    document.getElementById('s3t').setAttribute('visible', 'false')
+    document.getElementById('s4t').setAttribute('visible', 'true')
+  }
+function next4() {
+    document.getElementById('s4t').setAttribute('visible', 'false')
+    document.getElementById('s5t').setAttribute('visible', 'true')
+  }
+function next5() {
+    document.getElementById('s5t').setAttribute('visible', 'false')
+    document.getElementById('s6t').setAttribute('visible', 'true')
+  }
+function next6() {
+    document.getElementById('s6t').setAttribute('visible', 'false')
+    document.getElementById('s7ta').setAttribute('visible', 'true')
+    document.getElementById('s7tb').setAttribute('visible', 'true')
+  }
+function next7() {
+    document.getElementById('s7ta').setAttribute('visible', 'false')
+    document.getElementById('s7tb').setAttribute('visible', 'false')
+    document.getElementById('s8t').setAttribute('visible', 'true')
+  }
+function next8() {
+    document.getElementById('s7ta').setAttribute('visible', 'false')
+    document.getElementById('s7tb').setAttribute('visible', 'false')
+    document.getElementById('s9t').setAttribute('visible', 'true')
+  }
+function next9() {
+    document.getElementById('s8t').setAttribute('visible', 'false')
+    document.getElementById('s10t').setAttribute('visible', 'true')
+  }
+function next10() {
+    document.getElementById('s9t').setAttribute('visible', 'false')
+    document.getElementById('s10t').setAttribute('visible', 'true')
+  }
+function next11() {
+    document.getElementById('s10t').setAttribute('visible', 'false')
+  }
+  }</script>
+
+</head>
+
+    <body>
+    <a-assets>
+      
+    </a-assets>
+<a-scene>
+<a-sky src="s1.jpg"></a-sky>
+
+
+    <a-entity id="s1t" set-sky="s2" onclick="next1()"></a-entity>
+    <a-entity id="s2t" set-sky="s3" onclick="next2()"></a-entity>
+    <a-entity id="s3t" set-sky="s4" onclick="next3()"></a-entity>
+    <a-entity id="s4t" set-sky="s5" onclick="next4()"></a-entity>
+    <a-entity id="s5t" set-sky="s6" onclick="next5()"></a-entity>
+    <a-entity id="s6t" set-sky="s7" onclick="next6()"></a-entity>
+    <a-entity id="s7ta" set-sky="s8" onclick="next7()"></a-entity>
+    <a-entity id="s7tb" set-sky="s9" onclick="next8()"></a-entity>
+    <a-entity id="s8t" set-sky="s10" onclick="next9()"></a-entity>
+    <a-entity id="s9t" set-sky="s10" onclick="next10()"></a-entity>
+    <a-entity id="s10t" set-sky="s11" onclick="next11()"></a-entity>
+
+
+  
+ 
+
+  <a-camera position="0 2 4">
+    <a-cursor color="#4CC3D9" fuse="true" timeout="10"></a-cursor>
+  </a-camera>
+
+ 
+</a-scene>
+
+    </body>
+</html>
+
+
+
