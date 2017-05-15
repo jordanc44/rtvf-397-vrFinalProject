@@ -25,6 +25,7 @@
   });
     
 </script>
+        
 <script type="text/javascript"> 
 function next1() {
     document.getElementById('s1t').setAttribute('visible', 'false')
@@ -85,7 +86,7 @@ function next11() {
 
 
 
-    <a-sphere id="st1" color="black" radius="0.3" position="-4 2 0" visible="true" set-sky="kellogg.jpeg" onClick="next1()"></a-sphere>
+    <a-entity id="st1" geometry="primitive: sphere" material="color: red" visible="true" set-sky="kellogg.jpeg" onClick="next1()"></a-entity>
     <a-sphere id="st2" color="red" radius="0.3" position="-4 5 0" visible="false" set-sky="roof.jpeg" onClick="next2()"></a-sphere>
     <a-entity id="s3t" set-sky="s4" onclick="next3()"></a-entity>
     <a-entity id="s4t" set-sky="s5" onclick="next4()"></a-entity>
