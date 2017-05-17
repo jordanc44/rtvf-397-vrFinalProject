@@ -26,6 +26,7 @@
 function next1() {
     document.getElementById('s1t').setAttribute('visible', 'false')
     document.getElementById('s2t').setAttribute('visible', 'true')
+    document.getElementById('start').components.sound.stopSound();
     document.getElementById('s1t').components.sound.playSound();
   }
 function next2() {
@@ -76,7 +77,7 @@ function next11() {
 
     <body>
     <a-assets>
-    
+        <audio id="start" src="353416__squashy555__seagull-on-beach.mp3" autoplay="true" loop="true" ></audio>
     </a-assets>
 <a-scene>
 <a-sky src="beach.jpg"></a-sky>
