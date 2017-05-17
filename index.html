@@ -26,6 +26,7 @@
 function next1() {
     document.getElementById('s1t').setAttribute('visible', 'false')
     document.getElementById('s2t').setAttribute('visible', 'true')
+    document.getElementById('s2t').components.sound.playSound();
   }
 function next2() {
     document.getElementById('s2t').setAttribute('visible', 'false')
@@ -83,7 +84,7 @@ function next11() {
 
 
     <a-entity id="s1t" geometry="primitive: sphere; radius:0.1" material="color: yellow" position=" 5 3 6"  visible="true" set-sky="kellogg1.jpg" onclick="next1()"></a-entity>
-    <a-entity id="s2t" geometry="primitive: sphere; radius:0.3" material="color: yellow" position=" -5 2 -6" sound="src: 20192__patchen__frost-lobby2.mp3; loop: true; autoplay: true" visible="false" set-sky="s" onclick="next2()"></a-entity>
+    <a-entity id="s2t" geometry="primitive: sphere; radius:0.3" material="color: yellow" position=" -5 2 -6" sound="src: 20192__patchen__frost-lobby2.mp3; loop: true; autoplay: false" visible="false" set-sky="s" onclick="next2()"></a-entity>
     <a-entity id="s3t" geometry="primitive: sphere; radius:0.5" material="color: yellow" position=" -4 3 -4 "visible="false" set-sky="roof.jpeg" onclick="next3()"></a-entity>
     <a-entity id="s4t" geometry="primitive: sphere; radius:0.1" material="color: yellow"  position=" 6 3 6" visible="false"set-sky="tree.jpg" onclick="next4()"></a-entity>
     <a-entity id="s5t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" visible="false" set-sky="s6" onclick="next5()"> 
