@@ -32,20 +32,20 @@ function next1() {
 function next2() {
     document.getElementById('s2t').setAttribute('visible', 'false')
     document.getElementById('s3t').setAttribute('visible', 'true')
-    document.getElementById('st1').components.sound.pauseSound();
-    document.getElementById('st2').components.sound.playSound();
+    document.getElementById('s1t').components.sound.pause();
+    document.getElementById('s2t').components.sound.playSound();
   }
 function next3() {
     document.getElementById('s3t').setAttribute('visible', 'false')
     document.getElementById('s4t').setAttribute('visible', 'true')
-    document.getElementById('st2').components.sound.pauseSound();
-    document.getElementById('st3').components.sound.playSound();
+    document.getElementById('s2t').components.sound.pause();
+    document.getElementById('s3t').components.sound.playSound();
   }
 function next4() {
     document.getElementById('s4t').setAttribute('visible', 'false')
     document.getElementById('s5t').setAttribute('visible', 'true')
-    document.getElementById('st3').components.sound.pause();
-    document.getElementById('st4').components.sound.playSound();
+    document.getElementById('s3t').components.sound.pause();
+    document.getElementById('s4t').components.sound.playSound();
   }
 function next5() {
     document.getElementById('s5t').setAttribute('visible', 'false')
