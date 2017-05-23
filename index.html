@@ -32,14 +32,20 @@ function next1() {
 function next2() {
     document.getElementById('s2t').setAttribute('visible', 'false')
     document.getElementById('s3t').setAttribute('visible', 'true')
+    document.getElementById('st1').components.sound.pause();
+    document.getElementById('st2').components.sound.playSound();
   }
 function next3() {
     document.getElementById('s3t').setAttribute('visible', 'false')
     document.getElementById('s4t').setAttribute('visible', 'true')
+    document.getElementById('st2').components.sound.pause();
+    document.getElementById('st3').components.sound.playSound();
   }
 function next4() {
     document.getElementById('s4t').setAttribute('visible', 'false')
     document.getElementById('s5t').setAttribute('visible', 'true')
+    document.getElementById('st3').components.sound.pause();
+    document.getElementById('st4').components.sound.playSound();
   }
 function next5() {
     document.getElementById('s5t').setAttribute('visible', 'false')
@@ -85,9 +91,9 @@ function next11() {
 
     <a-entity id="start" sound="src: scene 1.mp3; loop: false; volume: 1; autoplay: true"></a-entity>
     <a-entity id="s1t" geometry="primitive: sphere; radius:0.1" material="color: yellow" position=" 5 3 6"  sound="src: scene 2.mp3; loop: false; volume: 1; autoplay: false"  visible="true" set-sky="kellogg1.jpg" onclick="next1()"></a-entity>
-    <a-entity id="s2t" geometry="primitive: sphere; radius:0.3" material="color: yellow" position=" -5 2 -6" visible="false" set-sky="s" onclick="next2()"></a-entity>
-    <a-entity id="s3t" geometry="primitive: sphere; radius:0.5" material="color: yellow" position=" -4 3 -4 "visible="false" set-sky="roof.jpeg" onclick="next3()"></a-entity>
-    <a-entity id="s4t" geometry="primitive: sphere; radius:0.1" material="color: yellow"  position=" 6 3 6" visible="false"set-sky="tree.jpg" onclick="next4()"></a-entity>
+    <a-entity id="s2t" geometry="primitive: sphere; radius:0.3" material="color: yellow" position=" -5 2 -6" sound="src: scene 3.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="s" onclick="next2()"></a-entity>
+    <a-entity id="s3t" geometry="primitive: sphere; radius:0.5" material="color: yellow" position=" -4 3 -4" sound="src: scene 4.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="roof.jpeg" onclick="next3()"></a-entity>
+    <a-entity id="s4t" geometry="primitive: sphere; radius:0.1" material="color: yellow"  position=" 6 3 6" sound="src: scene 5.mp3; loop: false; volume: 1; autoplay: false" visible="false"set-sky="tree.jpg" onclick="next4()"></a-entity>
     <a-entity id="s5t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" visible="false" set-sky="s6" onclick="next5()"> 
     <a-animation attribute="geometry.radius" to="0.5" repeat="indefinite" direction="alternate" dur="2000"  ></a-animation></a-entity>
     <a-entity id="s6t" set-sky="s7" onclick="next6()"></a-entity>
