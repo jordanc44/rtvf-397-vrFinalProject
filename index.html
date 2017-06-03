@@ -50,32 +50,53 @@ function next4() {
 function next5() {
     document.getElementById('s5t').setAttribute('visible', 'false')
     document.getElementById('s6t').setAttribute('visible', 'true')
+    document.getElementById('s4t').components.sound.pause();
+    document.getElementById('s5t').components.sound.playSound();
   }
 function next6() {
     document.getElementById('s6t').setAttribute('visible', 'false')
     document.getElementById('s7ta').setAttribute('visible', 'true')
     document.getElementById('s7tb').setAttribute('visible', 'true')
+    document.getElementById('s5t').components.sound.pause();
+    document.getElementById('s6t').components.sound.playSound();
   }
 function next7() {
     document.getElementById('s7ta').setAttribute('visible', 'false')
     document.getElementById('s7tb').setAttribute('visible', 'false')
     document.getElementById('s8t').setAttribute('visible', 'true')
+    document.getElementById('s6t').components.sound.pause();
+    document.getElementById('s7t').components.sound.playSound();
   }
 function next8() {
     document.getElementById('s7ta').setAttribute('visible', 'false')
     document.getElementById('s7tb').setAttribute('visible', 'false')
     document.getElementById('s9t').setAttribute('visible', 'true')
+    document.getElementById('s7t').components.sound.pause();
+    document.getElementById('s8t').components.sound.playSound();
   }
 function next9() {
     document.getElementById('s8t').setAttribute('visible', 'false')
     document.getElementById('s10t').setAttribute('visible', 'true')
+    document.getElementById('s7t').components.sound.pause();
+    document.getElementById('s9t').components.sound.playSound();
   }
 function next10() {
     document.getElementById('s9t').setAttribute('visible', 'false')
     document.getElementById('s10t').setAttribute('visible', 'true')
+    document.getElementById('s9t').components.sound.pause();
+    document.getElementById('s10t').components.sound.playSound();
   }
 function next11() {
     document.getElementById('s10t').setAttribute('visible', 'false')
+    document.getElementById('s11t').setAttribute('visible', 'true')
+    document.getElementById('s10t').components.sound.pause();
+    document.getElementById('s11t').components.sound.playSound();
+  }
+   function next12() {
+    document.getElementById('s11t').setAttribute('visible', 'false')
+    document.getElementById('s12t').setAttribute('visible', 'true')
+    document.getElementById('s11t').components.sound.pause();
+    document.getElementById('s12t').components.sound.playSound();
   }
   </script>
 
@@ -94,14 +115,16 @@ function next11() {
     <a-entity id="s2t" geometry="primitive: sphere; radius:0.3" material="color: yellow" position=" -5 2 -6" sound="src: scene 3.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="Boardroom.jpg" onclick="next2()"></a-entity>
     <a-entity id="s3t" geometry="primitive: sphere; radius:0.5" material="color: yellow" position=" -4 3 -4" sound="src: scene 4.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="roof.jpeg" onclick="next3()"></a-entity>
     <a-entity id="s4t" geometry="primitive: sphere; radius:0.1" material="color: yellow"  position=" 6 3 6" sound="src: scene 5.mp3; loop: false; volume: 1; autoplay: false" visible="false"set-sky="tree.jpg" onclick="next4()"></a-entity>
-    <a-entity id="s5t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" visible="false" set-sky="stairs.jpeg" onclick="next5()"> 
+    <a-entity id="s5t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" sound="src: scene 6.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="stairs.jpeg" onclick="next5()"> 
     <a-animation attribute="geometry.radius" to="0.5" repeat="indefinite" direction="alternate" dur="2000"  ></a-animation></a-entity>
-    <a-entity id="s6t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" visible="false" set-sky="river2.jpeg" onclick="next6()"></a-entity>
-    <a-entity id="s7ta" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -5 2 -6" visible="false" set-sky="mall.jpeg" onclick="next7()"></a-entity>
-    <a-entity id="s7tb" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -4 3 -4" visible="false" set-sky="mall.jpeg" onclick="next8()"></a-entity>
-    <a-entity id="s8t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" visible="false" set-sky="street1.jpeg" onclick="next9()"></a-entity>
-    <a-entity id="s9t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -5 2 6" visible="false" set-sky="street1.jpeg" onclick="next10()"></a-entity>
-    <a-entity id="s10t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" visible="false" set-sky="wrigley.jpeg" onclick="next11()"></a-entity>
+    <a-entity id="s6t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" sound="src: scene 7.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="river2.jpeg" onclick="next6()"></a-entity>
+    <a-entity id="s7ta" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -5 2 -6" sound="src: scene 8.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="mall.jpeg" onclick="next7()"></a-entity>
+    <a-entity id="s7tb" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -4 3 -4" sound="src: scene 9.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="mall.jpeg" onclick="next8()"></a-entity>
+    <a-entity id="s8t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" sound="src: scene 10.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="street1.jpeg" onclick="next9()"></a-entity>
+    <a-entity id="s9t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -5 2 6" sound="src: scene 10.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="street1.jpeg" onclick="next10()"></a-entity>
+    <a-entity id="s10t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" -2 1 6" sound="src: scene 11.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="wrigley.jpeg" onclick="next11()"></a-entity>
+     <a-entity id="s11t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" sound="src: scene 12.mp3; loop: false; volume: 1; autoplay: false" visible="false" set-sky="car.jpg" onclick="next12()"></a-entity>
+    <a-entity id="s12t" geometry="primitive: sphere; radius:0.1" material="color: blue" position=" 5 3 6" visible="false" set-sky="" onclick="next12()"></a-entity>
 
 
   
