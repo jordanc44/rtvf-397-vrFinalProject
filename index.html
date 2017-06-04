@@ -128,7 +128,18 @@ function next11() {
 
  
 </a-scene>
-
+<script>
+    AFRAME.registerComponent('acceleration', {
+        tick: function() {
+            var altitude = (this.el.getAttribute('position').z);
+        }
+    })
+</script>
+<a-scene>
+    <a-entity position="0 0 150">
+        <a-entity id="myCamera" camera acceleration look-controls keyboard-controls></a-entity>
+    </a-entity>
+</a-scene>
     </body>
 </html>
 
